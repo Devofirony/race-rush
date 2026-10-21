@@ -1,6 +1,8 @@
 plugins { id 'com.android.application' }
 android {
+  signingConfigs { fixed { storeFile file('racerush.keystore'); storePassword 'racerush'; keyAlias 'racerush'; keyPassword 'racerush' } }
+  buildTypes { debug { signingConfig signingConfigs.fixed } }
   namespace 'com.dev.racerush'
   compileSdk 34
-  defaultConfig { applicationId 'com.dev.racerush'; minSdk 21; targetSdk 34; versionCode 1; versionName '1.0' }
+  defaultConfig { applicationId 'com.dev.racerush'; minSdk 21; targetSdk 34; versionCode 3; versionName '3.0' }
 }
